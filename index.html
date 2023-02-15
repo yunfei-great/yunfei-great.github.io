@@ -144,30 +144,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-您好呀，欢迎来到我的个人网站！" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2023/02/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+      <a class="article-title" href="/2023/02/15/%E6%82%A8%E5%A5%BD%E5%91%80%EF%BC%8C%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%81/">您好呀，欢迎来到我的个人网站！</a>
     </h1>
   
 
         
-        <a href="/2023/02/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" class="archive-article-date">
-  	<time datetime="2023-02-15T04:59:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-15</time>
+        <a href="/2023/02/15/%E6%82%A8%E5%A5%BD%E5%91%80%EF%BC%8C%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%81/" class="archive-article-date">
+  	<time datetime="2023-02-15T10:14:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-15</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
-<hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><h2 id="偶然，看到了一个关于博客的创建教学视频，Youtuber是使用mac操作的，考虑到上学期学习了linux的一些简单命令，遂起了兴趣，创建过程中遇到了很多问题，经过我不断的google，解决了我遇到的一些问题，下面我会详细介绍创建过程。教学视频这是我观看的youtuber教学视频，如果喜欢跟着视频进行操作，可以选择视频，强烈建议使用Ubuntu进行操作，当然了如果有mac的话，就更加方便了-此操作是将个人博客部署到github，考虑到github不定期的无法访问，准备好科学上网工具。-正文步骤1-下载好nodejs2-换源’-lt-npm-install-g-cnpm-–registory-x3D-https-registry-npm-taobao-org-gt-“-此步骤可忽略3-安装hexo’-lt-cnpm-install-g-hexo-cli-gt-’上一步没做的话将cnpm换成npm，下面同理4-建立一个空的文件夹，例如’‘-然后进入这个路径5-初始化’‘6-启动，然后就可以在本地进行访问了，打开浏览器输入localhost：4000就可以看到创建好的blog-‘‘7-部署到远端-首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username-github-iousername为你的github名字-回到终端，键入以下命令’-lt-git-config-–global-user-name-“yourname”-gt-’’-lt-git-config-–global-user-email-“youremail”-gt-’yourname是github用户名，youremail是github邮箱-创建ssh，一路回车’-lt-ssh-keygen-t-rsa-C-“youremail”-gt-’这时他就会告诉你已经生成了-ssh文件，顺着路径找到这个文件复制全部内容。ssh，简单来讲，就是一个秘钥，其中，id-rsa是你这台电脑的私人秘钥，不能给别人看的，id-rsa-pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。-回到github，点击setting，找到SSH-keys的设置选项。点击New-SSH-key，把你复制的东西复制进去，title随意写-进入blog文件，编辑config-yml文件，拉到最下面修改为‘-lt-deploy-type-git-repo-https-github-com-YourgithubName-YourgithubName-github-io-git-branch-master-gt-’-这个时候需要先安装deploy-git-，也就是部署的命令-这样你才能用命令部署到GitHub。‘-lt-npm-install-hexo-deployer-git-–save-gt-’8-最后‘‘如果觉得主题不好看，可以去github上拉一个，然后修改一下配置文件就可以了"><a href="#偶然，看到了一个关于博客的创建教学视频，Youtuber是使用mac操作的，考虑到上学期学习了linux的一些简单命令，遂起了兴趣，创建过程中遇到了很多问题，经过我不断的google，解决了我遇到的一些问题，下面我会详细介绍创建过程。教学视频这是我观看的youtuber教学视频，如果喜欢跟着视频进行操作，可以选择视频，强烈建议使用Ubuntu进行操作，当然了如果有mac的话，就更加方便了-此操作是将个人博客部署到github，考虑到github不定期的无法访问，准备好科学上网工具。-正文步骤1-下载好nodejs2-换源’-lt-npm-install-g-cnpm-–registory-x3D-https-registry-npm-taobao-org-gt-“-此步骤可忽略3-安装hexo’-lt-cnpm-install-g-hexo-cli-gt-’上一步没做的话将cnpm换成npm，下面同理4-建立一个空的文件夹，例如’‘-然后进入这个路径5-初始化’‘6-启动，然后就可以在本地进行访问了，打开浏览器输入localhost：4000就可以看到创建好的blog-‘‘7-部署到远端-首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username-github-iousername为你的github名字-回到终端，键入以下命令’-lt-git-config-–global-user-name-“yourname”-gt-’’-lt-git-config-–global-user-email-“youremail”-gt-’yourname是github用户名，youremail是github邮箱-创建ssh，一路回车’-lt-ssh-keygen-t-rsa-C-“youremail”-gt-’这时他就会告诉你已经生成了-ssh文件，顺着路径找到这个文件复制全部内容。ssh，简单来讲，就是一个秘钥，其中，id-rsa是你这台电脑的私人秘钥，不能给别人看的，id-rsa-pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。-回到github，点击setting，找到SSH-keys的设置选项。点击New-SSH-key，把你复制的东西复制进去，title随意写-进入blog文件，编辑config-yml文件，拉到最下面修改为‘-lt-deploy-type-git-repo-https-github-com-YourgithubName-YourgithubName-github-io-git-branch-master-gt-’-这个时候需要先安装deploy-git-，也就是部署的命令-这样你才能用命令部署到GitHub。‘-lt-npm-install-hexo-deployer-git-–save-gt-’8-最后‘‘如果觉得主题不好看，可以去github上拉一个，然后修改一下配置文件就可以了" class="headerlink" title="偶然，看到了一个关于博客的创建教学视频，Youtuber是使用mac操作的，考虑到上学期学习了linux的一些简单命令，遂起了兴趣，创建过程中遇到了很多问题，经过我不断的google，解决了我遇到的一些问题，下面我会详细介绍创建过程。教学视频这是我观看的youtuber教学视频，如果喜欢跟着视频进行操作，可以选择视频，强烈建议使用Ubuntu进行操作，当然了如果有mac的话，就更加方便了,此操作是将个人博客部署到github，考虑到github不定期的无法访问，准备好科学上网工具。## 正文步骤1. 下载好nodejs2. 换源’&lt;npm install -g cnpm –registory&#x3D;https://registry.npm.taobao.org&gt;“ 此步骤可忽略3. 安装hexo’&lt;cnpm install -g hexo-cli&gt;’上一步没做的话将cnpm换成npm，下面同理4. 建立一个空的文件夹，例如’‘,然后进入这个路径5. 初始化’‘6. 启动，然后就可以在本地进行访问了，打开浏览器输入localhost：4000就可以看到创建好的blog ‘‘7. 部署到远端* 首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username.github.iousername为你的github名字* 回到终端，键入以下命令’&lt;git config –global user.name “yourname”&gt;’’&lt;git config –global user.email “youremail”&gt;’yourname是github用户名，youremail是github邮箱* 创建ssh，一路回车’&lt;ssh -keygen -t rsa -C “youremail”&gt;’这时他就会告诉你已经生成了.ssh文件，顺着路径找到这个文件复制全部内容。ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。* 回到github，点击setting，找到SSH keys的设置选项。点击New SSH key，把你复制的东西复制进去，title随意写* 进入blog文件，编辑config.yml文件，拉到最下面修改为‘&lt;deploy:  type: git  repo: https://github.com/YourgithubName/YourgithubName.github.io.git  branch: master&gt;’* 这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。‘&lt;npm install hexo-deployer-git –save&gt;’8. 最后‘‘如果觉得主题不好看，可以去github上拉一个，然后修改一下配置文件就可以了"></a>偶然，看到了一个关于博客的创建教学视频，Youtuber是使用mac操作的，考虑到上学期学习了linux的一些简单命令，遂起了兴趣，创建过程中遇到了很多问题，经过我不断的google，解决了我遇到的一些问题，下面我会详细介绍创建过程。<br><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=erKYtw4Rfhk">教学视频</a>这是我观看的youtuber教学视频，如果喜欢跟着视频进行操作，可以选择视频，<strong>强烈建议使用Ubuntu进行操作</strong>，当然了如果有mac的话，就更加方便了,此操作是将个人博客部署到github，考虑到github不定期的无法访问，准备好科学上网工具。<br>## 正文<br><strong>步骤</strong><br>1. 下载好nodejs<br>2. 换源’&lt;npm install -g cnpm –registory&#x3D;<a href="https://registry.npm.taobao.org>">https://registry.npm.taobao.org&gt;</a>“ <em>此步骤可忽略</em><br>3. 安装hexo’&lt;cnpm install -g hexo-cli&gt;’<em>上一步没做的话将cnpm换成npm，下面同理</em><br>4. 建立一个空的文件夹，例如’<mkdir blog>‘,然后进入这个路径<br>5. 初始化’<sudo hexo init>‘<br>6. 启动，然后就可以在本地进行访问了，打开浏览器输入localhost：4000就可以看到创建好的blog ‘<sudo hexo s>‘<br>7. 部署到远端<br>* 首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username.github.io<em>username为你的github名字</em><br>* 回到终端，键入以下命令’&lt;git config –global user.name “yourname”&gt;’’&lt;git config –global user.email “youremail”&gt;’<em>yourname是github用户名，youremail是github邮箱</em><br>* 创建ssh，一路回车’&lt;ssh -keygen -t rsa -C “youremail”&gt;’<br>这时他就会告诉你已经生成了.ssh文件，顺着路径找到这个文件复制全部内容。<br>ssh，简单来讲，就是一个秘钥，其中，id_rsa是你这台电脑的私人秘钥，不能给别人看的，id_rsa.pub是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。<br>* 回到github，点击setting，找到SSH keys的设置选项。点击New SSH key，把你复制的东西复制进去，title随意写<br>* 进入blog文件，编辑config.yml文件，拉到最下面修改为<br>‘&lt;deploy:<br>  type: git<br>  repo: <a target="_blank" rel="noopener" href="https://github.com/YourgithubName/YourgithubName.github.io.git">https://github.com/YourgithubName/YourgithubName.github.io.git</a><br>  branch: master<br>&gt;’<br>* 这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。<br>‘&lt;npm install hexo-deployer-git –save&gt;’<br>8. 最后<br>‘<hexo clean
+hexo generate
+hexo deploy>‘<br><strong>如果觉得主题不好看，可以去github上拉一个，然后修改一下配置文件就可以了</strong></h2><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>没什么可总结的，就酱吧</p>
 
       
 
@@ -180,7 +179,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2023/02/15/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">展开全文 >></a>
+          <a class="article-more-a" href="/2023/02/15/%E6%82%A8%E5%A5%BD%E5%91%80%EF%BC%8C%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E6%88%91%E7%9A%84%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99%EF%BC%81/">展开全文 >></a>
         </p>
       
 
