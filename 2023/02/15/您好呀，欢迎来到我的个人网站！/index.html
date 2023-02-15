@@ -16,7 +16,7 @@
 <meta property="og:description" content="前言 偶然，看到了一个关于博客的创建教学视频，Youtuber是使用mac操作的，考虑到上学期学习了linux的一些简单命令，遂起了兴趣，创建过程中遇到了很多问题，经过我不断的google，解决了我遇到的一些问题，下面我会详细介绍创建过程。  教学视频这是我观看的youtuber教学视频，如果喜欢跟着视频进行操作，可以选择视频，强烈建议使用Ubuntu进行操作，当然了如果有mac的话，就更加方便了">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-15T10:14:52.000Z">
-<meta property="article:modified_time" content="2023-02-15T12:34:28.015Z">
+<meta property="article:modified_time" content="2023-02-15T12:50:28.248Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -181,7 +181,7 @@
 <li>建立一个空的文件夹，例如’<mkdir blog>‘,然后进入这个路径</li>
 <li>初始化<code>sudo hexo init</code></li>
 <li>启动，然后就可以在本地进行访问了，打开浏览器输入localhost：4000就可以看到创建好的blog <code>sudo hexo s</code></li>
-<li>部署到远端<ul>
+<li>部署到远端<ol>
 <li>首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username.github.io<br><em>username为你的github名字</em></li>
 <li>回到终端，键入以下命令<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;&gt;&#x27;&#x27;&lt;git config --global user.email &quot;youremai</span><br></pre></td></tr></table></figure>
 <em>yourname是github用户名，youremail是github邮箱</em></li>
@@ -190,7 +190,7 @@
 <li>回到github，点击setting，找到SSH keys的设置选项。点击New SSH key，把你复制的东西复制进去，title随意写</li>
 <li>进入blog文件，编辑config.yml文件，拉到最下面修改为<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
 <li>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
-</ul>
+</ol>
 </li>
 <li>最后<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <strong>如果觉得主题不好看，可以去github上拉一个，然后修改一下配置文件就可以了</strong></li>
