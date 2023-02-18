@@ -16,7 +16,7 @@
 <meta property="og:description" content="前言偶然，看到了一个关于博客的创建教学视频，Youtuber是使用mac操作的，考虑到上学期学习了linux的一些简单命令，遂起了兴趣，创建过程中遇到了很多问题，经过我不断的google，解决了我遇到的一些问题，下面我会详细介绍创建过程。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-02-15T10:14:52.000Z">
-<meta property="article:modified_time" content="2023-02-16T09:44:33.216Z">
+<meta property="article:modified_time" content="2023-02-18T03:01:09.238Z">
 <meta property="article:author" content="Leo Liang">
 <meta name="twitter:card" content="summary">
   
@@ -176,23 +176,42 @@
 <h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p><strong>步骤</strong></p>
 <ol>
 <li>下载好nodejs</li>
-<li>换源<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pm install -g cnpm --registory=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
- <em>此步骤可忽略</em></li>
-<li>安装hexo<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<em>(上一步没做的话将cnpm换成npm，下面同理)</em></li>
+<li>换源 <em>(此步骤可忽略)</em></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registory=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>安装hexo <em>(上一步没做的话将cnpm换成npm，下面同理)</em></li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
 <li>建立一个空的文件夹，例如<code>mkdir blog</code>,然后进入这个路径</li>
 <li>初始化<code>sudo hexo init</code></li>
 <li>启动，然后就可以在本地进行访问了，打开浏览器输入localhost：4000就可以看到创建好的blog <code>sudo hexo s</code></li>
-<li>部署到远端<br> * 首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username.github.io<br>     <em>username为你的github名字</em><br> * 回到终端，键入以下命令<br>     <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure><br>     <em>yourname是github用户名，youremail是github邮箱</em><ul>
-<li>创建ssh，一路回车<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure><br>这时他就会告诉你已经生成了.ssh文件，顺着路径找到这个文件复制全部内容。<br>ssh，简单来讲，就是一个秘钥，其中，<code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</li>
-<li>回到github，点击setting，找到SSH keys的设置选项。点击New SSH key，把你复制的东西复制进去，title随意写。<ul>
+<li>部署到远端</li>
+</ol>
+<ul>
+<li><p>首先进入github创建一个新的仓库，仓库名字要求严格必须设置为：username.github.io<br><em>username为你的github名字</em></p>
+</li>
+<li><p>回到终端，键入以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p><em>yourname是github用户名，youremail是github邮箱</em></p>
+</li>
+<li><p>创建ssh，一路回车</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>这时他就会告诉你已经生成了.ssh文件，顺着路径找到这个文件复制全部内容。<br>ssh，简单来讲，就是一个秘钥，其中，<code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在GitHub上，这样当你链接GitHub自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过git上传你的文件到GitHub上。</p>
+</li>
+<li><p>回到github，点击setting，找到SSH keys的设置选项。点击New SSH key，把你复制的东西复制进去，title随意写。</p>
+</li>
 <li><p>进入blog文件，编辑config.yml文件，拉到最下面修改为</p>
-  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">		type: git</span><br><span class="line">		repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">		branch: master</span><br></pre></td></tr></table></figure></li>
-</ul>
 </li>
-<li>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
 </ul>
-</li>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/YourgithubName/YourgithubName.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<ul>
+<li>这个时候需要先安装deploy-git ，也就是部署的命令,这样你才能用命令部署到GitHub。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="8">
 <li>最后<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <strong>如果觉得主题不好看，可以去github上拉一个，然后修改一下配置文件就可以了</strong></li>
 </ol>
